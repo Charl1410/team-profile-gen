@@ -1,0 +1,22 @@
+{
+  "name": "week-10-team-profile-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charl1410/team-profile-gen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Charl1410/team-profile-gen/issues"
+  },
+  "homepage": "https://github.com/Charl1410/team-profile-gen#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
