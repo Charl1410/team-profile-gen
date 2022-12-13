@@ -1,0 +1,1 @@
+//The tests test the class to make sure the constructor works  
