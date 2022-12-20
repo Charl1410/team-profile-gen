@@ -2,7 +2,7 @@
 //inquirer takes an array of objects as its input 
 //function to run main question
 
-const { default: inquirer } = require("inquirer")
+const inquirer = require("inquirer")
 
 function starterQuestions() {
     inquirer.prompt([
@@ -15,6 +15,9 @@ function starterQuestions() {
         },
 
     ])
+    .then(response => {
+        console.log(response);
+     })
 }
 
 function addEmployee() {
@@ -40,6 +43,9 @@ function addEmployee() {
 
         },
     ])
+    .then(response => {
+        console.log(response);
+     })
 }
 
 
@@ -73,6 +79,9 @@ function addEngineer() {
 
         },
     ])
+    .then(response => {
+        console.log(response);
+     })
 }
 
 function addIntern() {
@@ -105,6 +114,9 @@ function addIntern() {
 
         },
     ])
+    .then(response => {
+        console.log(response);
+     })
 }
 
 function addManager() {
@@ -145,3 +157,4 @@ function addManager() {
 
 
 
+starterQuestions()
