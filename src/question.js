@@ -2,7 +2,7 @@
 //inquirer takes an array of objects as its input 
 //function to run main question
 
-const inquirer = require("inquirer")
+const inquirer = require("inquirer");
 
 function starterQuestions() {
     inquirer.prompt([
@@ -68,6 +68,8 @@ function addEmployee() {
     ])
     .then(response => {
         console.log(response);
+        starterQuestions();
+
      })
 }
 
@@ -104,6 +106,7 @@ function addEngineer() {
     ])
     .then(response => {
         console.log(response);
+        starterQuestions();
      })
 }
 
@@ -139,6 +142,8 @@ function addIntern() {
     ])
     .then(response => {
         console.log(response);
+        starterQuestions();
+
      })
 }
 
@@ -172,10 +177,17 @@ function addManager() {
 
         },
     ])
+    .then(response => {
+        console.log(response);
+        starterQuestions();
+    })
+
+
+
 }
 
 //need to create a function that builds the team page 
 
 
-module.exports ={starterQuestions, addEmployee, addEngineer, addIntern, addManager}
+module.exports = {starterQuestions, addEmployee, addEngineer, addIntern, addManager}
 
