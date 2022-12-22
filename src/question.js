@@ -15,10 +15,13 @@ function starterQuestions() {
         },
 
     ])
-    .then(response => {
-        console.log(response);
+    .then(function(response) {
+        if(response.action_choice === 'Add an employee'){
+            addEmployee()
+       }
      })
 }
+
 
 function addEmployee() {
     inquirer.prompt([
