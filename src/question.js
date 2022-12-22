@@ -152,9 +152,5 @@ function addManager() {
 }
 
 
+module.exports ={starterQuestions, addEmployee, addEngineer, addIntern, addManager}
 
-
-
-
-
-starterQuestions()
