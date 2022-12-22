@@ -12,7 +12,7 @@ const Engineer = require('../lib/Engineer')
 //create an empty array to push to existing team members 
 
 
-//start the main questions running 
+//start the questions running 
 starterQuestions()
 
 

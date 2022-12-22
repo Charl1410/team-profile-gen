@@ -19,6 +19,26 @@ function starterQuestions() {
         if(response.action_choice === 'Add an employee'){
             addEmployee()
        }
+
+       else if(response.action_choice === 'Add an engineer'){
+            addEngineer()
+
+       }
+
+       else if(response.action_choice === 'Add an intern'){
+            addIntern()
+
+        }
+
+        else if(response.action_choice === 'Add a manager'){
+            addManager()
+
+       }
+
+       //else build the team
+       else {}
+
+       
      })
 }
 
@@ -153,6 +173,8 @@ function addManager() {
         },
     ])
 }
+
+//need to create a function that builds the team page 
 
 
 module.exports ={starterQuestions, addEmployee, addEngineer, addIntern, addManager}
