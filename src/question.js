@@ -1,8 +1,16 @@
 //main menu questions
 //inquirer takes an array of objects as its input 
 //function to run main question
-
+const Manager = require('../lib/Manager');
+const Employee = require('../lib/Employee');
+const Intern = require('../lib/Intern');
+const Engineer = require('../lib/Engineer');
 const inquirer = require("inquirer");
+
+const managerArray = [];
+const employeeArray = [];
+const internArray = [];
+const engineerArray = [];
 
 function starterQuestions() {
     inquirer.prompt([
@@ -15,6 +23,7 @@ function starterQuestions() {
         },
 
     ])
+    //checking each response and running add specific function based on selection from main menu questions
     .then(function(response) {
         if(response.action_choice === 'Add an employee'){
             addEmployee()
@@ -68,6 +77,14 @@ function addEmployee() {
     ])
     .then(response => {
         console.log(response);
+        //creating a new instance of employee using the base class and putting in the response data into the parameters 
+        const employee = new Employee(response.employee_id, response.employee_name, response.employee_email);
+        //pusing the new onject into an empty array
+        employeeArray.push(employee);
+
+        console.log(JSON.stringify(employeeArray));
+
+        //calling main menu questions at end of each selection 
         starterQuestions();
 
      })
@@ -106,6 +123,13 @@ function addEngineer() {
     ])
     .then(response => {
         console.log(response);
+
+        const engineer = new Engineer(response.engineer_id, response.engineer_name, response.engineer_email, response.engineer_github);
+
+        engineerArray.push(engineer);
+
+        console.log(JSON.stringify(engineerArray));
+
         starterQuestions();
      })
 }
@@ -142,6 +166,12 @@ function addIntern() {
     ])
     .then(response => {
         console.log(response);
+
+        const intern = new Intern(response.intern_id, response.intern_name, response.intern_email, response.intern_school);
+
+        internArray.push(intern);
+
+        console.log(JSON.stringify(internArray));
         starterQuestions();
 
      })
@@ -179,6 +209,13 @@ function addManager() {
     ])
     .then(response => {
         console.log(response);
+
+        const manager = new Manager(response.manager_id, response.manager_name, response.manager_email, response.ager_officeNubmer);
+
+        managerArray.push(manager);
+
+        console.log(JSON.stringify(managerArray));
+
         starterQuestions();
     })
 
