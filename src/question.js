@@ -45,7 +45,7 @@ function starterQuestions() {
        }
 
        //else build the team
-       else {}
+       else BuildTeam()
 
        
      })
@@ -219,9 +219,13 @@ function addManager() {
         starterQuestions();
     })
 
-
+//building function with parameters that 
+function BuildTeam(manager, employee, intern, engineer) {
 
 }
+
+}
+
 
 //need to create a function that builds the team page 
 
