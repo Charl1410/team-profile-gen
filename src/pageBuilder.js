@@ -7,8 +7,9 @@ const Engineer = require('../lib/Engineer');
 //function that will generate the HTML content and take the inquirer information 
 function buildTeam(managers, engineers, interns) {
 
-    //open the template HTMK file 
+    //open the template HTML file 
     let html = fs.readFileSync('./template/index.html', 'utf-8');
+    console.log(html + 'consoled html filesync')
     if (html)
     {
         //creating empty template for content
@@ -56,15 +57,16 @@ function buildTeam(managers, engineers, interns) {
 
 })
 
-
-    }}
-
-
 //replacing the placeholders in the template for the new generated HTML
-html = html.replace('<!---Manage§r--->', managerHTML);
+html = html.replace('<!---Manager--->', managerHTML);
 html = html.replace('<!---Engineer--->', engineerHTML);
 html = html.replace(' <!---Intern--->', internHTML);
 
 fs.writeFileSync('./dist/team.html', html, 'utf-8');
 
 console.log('Team has been successfully built!')
+
+    }}
+
+
+module.exports = {buildTeam}

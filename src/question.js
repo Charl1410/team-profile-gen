@@ -6,7 +6,9 @@ const Employee = require('../lib/Employee');
 const Intern = require('../lib/Intern');
 const Engineer = require('../lib/Engineer');
 const inquirer = require("inquirer");
+const {buildTeam} = require('./pageBuilder')
 
+//created an empty array to push new entry data into 
 const managerArray = [];
 const employeeArray = [];
 const internArray = [];
@@ -45,7 +47,8 @@ function starterQuestions() {
        }
 
        //else build the team
-       else BuildTeam()
+       else buildTeam(managerArray, engineerArray, internArray);
+
 
        
      })
@@ -218,17 +221,10 @@ function addManager() {
 
         starterQuestions();
     })
-
-//building function with parameters that 
-function BuildTeam(manager, employee, intern, engineer) {
-
-}
-
 }
 
 
-//need to create a function that builds the team page 
+
 
 
 module.exports = {starterQuestions, addEmployee, addEngineer, addIntern, addManager}
-
