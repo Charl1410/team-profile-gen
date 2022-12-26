@@ -9,10 +9,7 @@ const Employee = require('../lib/Employee');
 const Intern = require('../lib/Intern');
 const Engineer = require('../lib/Engineer');
 
-//create an empty array to push to existing team members 
-
-
-//start the questions running 
+//start the programme running 
 starterQuestions();
 
 
