@@ -213,7 +213,7 @@ function addManager() {
     .then(response => {
         console.log(response);
 
-        const manager = new Manager(response.manager_id, response.manager_name, response.manager_email, response.ager_officeNubmer);
+        const manager = new Manager(response.manager_id, response.manager_name, response.manager_email, response.manager_officeNubmer);
 
         managerArray.push(manager);
 

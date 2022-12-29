@@ -18,11 +18,11 @@ function buildTeam(managers, engineers, interns) {
         managers.forEach(manager =>{
             managerHTML +=
              `<div class="card">
-                <div class="card-header>
-                    <h2> ${name} </h2>
-                    <p>Employee ID: ${id}</p>
-                    <p>Email: <a href="${email}></p>
-                    <p>Office Number: ${officeNumber}</p>
+                <div class="card-header">
+                    <h2> ${manager.getName()} </h2>
+                    <p>Employee ID: ${manager.getID()}</p>
+                    <p>Email: <a href="${manager.getEmail()}"></p>
+                    <p>Office Number: ${manager.getOfficeNumber()}</p>
                 </div>
             </div>
             `;
@@ -33,10 +33,10 @@ function buildTeam(managers, engineers, interns) {
             engineerHTML +=
              `<div class="card">
                 <div class="card-header>
-                    <h2> ${name} </h2>
-                    <p>Employee ID: ${id}</p>
-                    <p>Email: <a href="${email}></p>
-                    <p>GitHub profile : <a href = "https://github.com/${github}></p>
+                    <h2> ${engineer.getName()} </h2>
+                    <p>Employee ID: ${engineer.getID()}</p>
+                    <p>Email: <a href="${engineer.getEmail()}></p>
+                    <p>GitHub profile : <a href = "https://github.com/${engineer.getGitHub()}></p>
                 </div>
             </div>
             `;
@@ -48,10 +48,10 @@ function buildTeam(managers, engineers, interns) {
             internHTML +=
              `<div class="card">
                 <div class="card-header>
-                    <h2> ${name} </h2>
-                    <p>Employee ID: ${id}</p>
-                    <p>Email: <a href="${email}></p>
-                    <p>School: ${school}</p>
+                    <h2> ${intern.getName()} </h2>
+                    <p>Employee ID: ${intern.getID()}</p>
+                    <p>Email: <a href="${intern.getEmail()}></p>
+                    <p>School: ${intern.getSchool()}</p>
                 </div>
             </div>
             `;
