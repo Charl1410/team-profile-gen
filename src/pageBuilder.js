@@ -10,7 +10,7 @@ function buildTeam(managers, engineers, interns) {
 
     //open the template HTML file 
     let html = fs.readFileSync('../template/index.html', 'utf-8');
-    console.log(html + 'consoled html filesync')
+    //console.log(html + 'consoled html filesync')
     if (html)
     {
         //creating empty template for content
@@ -19,10 +19,10 @@ function buildTeam(managers, engineers, interns) {
             managerHTML +=
              `<div class="card">
                 <div class="card-header>
-                    <h2> ${manager.manager_name} </h2>
-                    <p>Employee ID: ${manager.manager_id}</p>
-                    <p>Email: <a href="${manager.manager_email}></p>
-                    <p>Office Number: ${manager.manager_officeNumber}</p>
+                    <h2> ${name} </h2>
+                    <p>Employee ID: ${id}</p>
+                    <p>Email: <a href="${email}></p>
+                    <p>Office Number: ${officeNumber}</p>
                 </div>
             </div>
             `;
@@ -33,10 +33,10 @@ function buildTeam(managers, engineers, interns) {
             engineerHTML +=
              `<div class="card">
                 <div class="card-header>
-                    <h2> ${engineer.engineer_name} </h2>
-                    <p>Employee ID: ${engineer.engineer_id}</p>
-                    <p>Email: <a href="${engineer.engineer_email}></p>
-                    <p>GitHub profile : <a href = "https://github.com/${engineer.engineer_github}></p>
+                    <h2> ${name} </h2>
+                    <p>Employee ID: ${id}</p>
+                    <p>Email: <a href="${email}></p>
+                    <p>GitHub profile : <a href = "https://github.com/${github}></p>
                 </div>
             </div>
             `;
@@ -48,10 +48,10 @@ function buildTeam(managers, engineers, interns) {
             internHTML +=
              `<div class="card">
                 <div class="card-header>
-                    <h2> ${intern.intern_name} </h2>
-                    <p>Employee ID: ${intern.intern_id}</p>
-                    <p>Email: <a href="${intern.intern_email}></p>
-                    <p>School: ${intern.intern_school}</p>
+                    <h2> ${name} </h2>
+                    <p>Employee ID: ${id}</p>
+                    <p>Email: <a href="${email}></p>
+                    <p>School: ${school}</p>
                 </div>
             </div>
             `;
@@ -62,8 +62,9 @@ function buildTeam(managers, engineers, interns) {
 html = html.replace('<!---Manager--->', managerHTML);
 html = html.replace('<!---Engineer--->', engineerHTML);
 html = html.replace(' <!---Intern--->', internHTML);
+console.log(html)
 
-fs.writeFileSync('./dist/team.html', html, 'utf-8');
+fs.writeFileSync('../dist/team.html', html, 'utf-8');
 
 console.log('Team has been successfully built!')
 
