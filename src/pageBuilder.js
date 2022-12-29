@@ -32,11 +32,11 @@ function buildTeam(managers, engineers, interns) {
         engineers.forEach(engineer =>{
             engineerHTML +=
              `<div class="card">
-                <div class="card-header>
+                <div class="card-heade"r>
                     <h2> ${engineer.getName()} </h2>
                     <p>Employee ID: ${engineer.getID()}</p>
-                    <p>Email: <a href="${engineer.getEmail()}></p>
-                    <p>GitHub profile : <a href = "https://github.com/${engineer.getGitHub()}></p>
+                    <p>Email: <a href="${engineer.getEmail()}"></p>
+                    <p>GitHub profile : <a href = "https://github.com/${engineer.getGitHub()}"></p>
                 </div>
             </div>
             `;
@@ -47,10 +47,10 @@ function buildTeam(managers, engineers, interns) {
         interns.forEach(intern =>{
             internHTML +=
              `<div class="card">
-                <div class="card-header>
+                <div class="card-header">
                     <h2> ${intern.getName()} </h2>
-                    <p>Employee ID: ${intern.getID()}</p>
-                    <p>Email: <a href="${intern.getEmail()}></p>
+                    <p>Employee ID: ${intern.getID()}"</p>
+                    <p>Email: <a href="${intern.getEmail()}"></p>
                     <p>School: ${intern.getSchool()}</p>
                 </div>
             </div>
