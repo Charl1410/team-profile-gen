@@ -1,8 +1,8 @@
 # Team profile generator 
 
-This purpose of this project is to be able to use node.js to create a command line application that generates the html for a company team with the input. 
+This purpose of this project is to be able to use node.js to create a command line application that generates the html for a company team with the input.  
 
-## instillation 
+## Instillation 
 To use this application node.js must be installed: https://nodejs.org/en/download/
 The packages required are:
  * Inquirer@8.4.2 to run the command line questions
@@ -16,5 +16,5 @@ To use this application all dependencies must be installed. To run the applciati
 https://vimeo.com/785249599/811e723f69
 
 ## Screenshots 
-
+![](https://github.com/Charl1410/team-profile-gen/blob/68a02e42f4c424bd1307b4752d7e1d7416645c0d/Screenshots/Screenshot%201.png)
 
