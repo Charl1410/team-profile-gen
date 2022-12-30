@@ -10,7 +10,6 @@ const {buildTeam} = require('./pageBuilder')
 
 //created an empty array to push new entry data into 
 const managerArray = [];
-const employeeArray = [];
 const internArray = [];
 const engineerArray = [];
 
@@ -20,20 +19,15 @@ function starterQuestions() {
             type: 'list',
             message: 'What action would you like to take?',
             name: 'action_choice',
-            choices: ['Add an employee', 'Add an engineer', 'Add an intern', 'Add a manager', 'Build team']
+            choices: ['Add an engineer', 'Add an intern', 'Add a manager', 'Build team']
 
         },
 
     ])
     //checking each response and running add specific function based on selection from main menu questions
     .then(function(response) {
-        if(response.action_choice === 'Add an employee'){
-            addEmployee()
-       }
-
-       else if(response.action_choice === 'Add an engineer'){
+        if(response.action_choice === 'Add an engineer'){
             addEngineer()
-
        }
 
        else if(response.action_choice === 'Add an intern'){
@@ -51,45 +45,6 @@ function starterQuestions() {
 
 
        
-     })
-}
-
-
-function addEmployee() {
-    inquirer.prompt([
-        {
-            type: 'input',
-            message: 'What is the employee\s name?',
-            name: 'employee_name',
-            
-        },
-
-        {
-            type: 'input',
-            message: 'What is the employee\s ID?',
-            name: 'employee_id',
-
-        },
-
-        {
-            type: 'input',
-            message: 'What is the employee\s email?',
-            name: 'employee_email',
-
-        },
-    ])
-    .then(response => {
-        console.log(response);
-        //creating a new instance of employee using the base class and putting in the response data into the parameters 
-        const employee = new Employee(response.employee_id, response.employee_name, response.employee_email);
-        //pusing the new onject into an empty array
-        employeeArray.push(employee);
-
-        console.log(JSON.stringify(employeeArray));
-
-        //calling main menu questions at end of each selection 
-        starterQuestions();
-
      })
 }
 
@@ -125,13 +80,11 @@ function addEngineer() {
         },
     ])
     .then(response => {
-        console.log(response);
+       
 
         const engineer = new Engineer(response.engineer_id, response.engineer_name, response.engineer_email, response.engineer_github);
 
         engineerArray.push(engineer);
-
-        console.log(JSON.stringify(engineerArray));
 
         starterQuestions();
      })
@@ -168,13 +121,11 @@ function addIntern() {
         },
     ])
     .then(response => {
-        console.log(response);
 
         const intern = new Intern(response.intern_id, response.intern_name, response.intern_email, response.intern_school);
 
         internArray.push(intern);
 
-        console.log(JSON.stringify(internArray));
         starterQuestions();
 
      })
@@ -211,13 +162,10 @@ function addManager() {
         },
     ])
     .then(response => {
-        console.log(response);
 
         const manager = new Manager(response.manager_id, response.manager_name, response.manager_email, response.manager_officeNubmer);
 
         managerArray.push(manager);
-
-        console.log(JSON.stringify(managerArray));
 
         starterQuestions();
     })
@@ -227,4 +175,4 @@ function addManager() {
 
 
 
-module.exports = {starterQuestions, addEmployee, addEngineer, addIntern, addManager}
+module.exports = {starterQuestions, addEngineer, addIntern, addManager}
