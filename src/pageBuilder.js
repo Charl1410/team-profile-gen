@@ -3,7 +3,6 @@ const Manager = require('../lib/Manager');
 const Employee = require('../lib/Employee');
 const Intern = require('../lib/Intern');
 const Engineer = require('../lib/Engineer');
-//const path = require('../template/index.html')
 
 //function that will generate the HTML content and take the inquirer information 
 function buildTeam(managers, engineers, interns) {
