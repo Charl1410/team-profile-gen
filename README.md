@@ -12,8 +12,9 @@ The packages required are:
 ## Usage
 To use this application all dependencies must be installed. To run the applciation locate to the src directory and run the index.js file using "node index.js".
 
-## Demonstration
+## Demonstration video
+https://vimeo.com/785249599/811e723f69
 
 ## Screenshots 
 
-## Links 
+
